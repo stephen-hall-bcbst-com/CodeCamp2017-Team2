@@ -12,10 +12,21 @@ module.exports = {
         // CODE HERE!
         // *********************************************************************
 
-        Slack.postMessageToChannel(channelName, 'Heard your cry for help.');
+        Slack.postMessageToChannel(channelName, 'What do you need help with?.');
+
+        var Helper = message.tolowercase();
+        var response = "I think I can help you";
+
+        if (Helper.includes("fix") && Helper.includes("fixing")) {
+            response = "I can help you fix it."; 
+            }
+        
+           
+        Slack.postMessageToChannel(channelName, response);
 
         // *********************************************************************
         // STOP CODING!
         // *********************************************************************
     },
 };
+
