@@ -10,6 +10,11 @@ module.exports = {
         // CODE HERE!
         // *********************************************************************
          
+        var helper = require('./helpers');
+        bool = JSON.parse(helper.readDataFromFile('loggged_in bool'));
+
+        
+
          if (bool == false) {
             Slack.postMessageToChannel(channel, "Here I am!");
             bool = true;
@@ -17,6 +22,8 @@ module.exports = {
             Slack.postMessageToChannel(channel, "What do you need?");
             bool = false;
         }
+
+        helper.writeDataToFile('loggged_in bool', bool);
        
         // *********************************************************************
         // STOP CODING!
