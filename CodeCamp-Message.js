@@ -12,7 +12,7 @@ module.exports = {
     var resp = "shhhhhhh";
    /**
     * ^ ^ ^    default    ^ ^ ^
-    * v v v random stuff. v v v
+    * v v v random stuff. v v v 
     */ 
     if (mlc.includes("laser")) {
         resp = "Not anymore, theres a blanket";
@@ -55,7 +55,7 @@ module.exports = {
      */ 
     else if (mlc.includes("joke")) {
         var helper = require('./helpers');
-        switch (helper.numberBetweenXandY(1, 4)) {
+        switch (helper.numberBetweenXandY(1, 5)) {
             case 1:
                 resp ='stop SLACKing off';                
                 break;
@@ -67,6 +67,9 @@ module.exports = {
                 break;
             case 4:
                 resp ='whats the suns favorite song? all star by smash mouth';                
+                break;
+            case 5:
+                resp ='whats heavier, a ton of feathers or a ton of gold? neither. a ton is a ton';                
                 break;
             default:
                 break;
