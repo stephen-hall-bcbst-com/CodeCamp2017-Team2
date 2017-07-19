@@ -55,7 +55,7 @@ module.exports = {
      */ 
     else if (mlc.includes("joke")) {
         var helper = require('./helpers');
-        switch (helper.numberBetweenXandY(1, 12)) {
+        switch (helper.numberBetweenXandY(1, 15)) {
             case 1:
                 resp ='stop SLACKing off';                
                 break;
@@ -91,6 +91,15 @@ module.exports = {
                 break;
             case 12:
                 resp ='how did the develepor go bankrupt? because he spent all of his CACHE';                
+                break;
+            case 13:
+                resp ='what kind of witch do you find in the desert? a sandwich';                
+                break;
+            case 14:
+                resp ='a magician was driving a car, and he made it turn into a drive way.';                
+                break;
+            case 15:
+                resp ='what did the big bucket say to the little one? <<lookin a little pail there>>';                
                 break;
             default:
                 break;

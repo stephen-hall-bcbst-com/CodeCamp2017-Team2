@@ -1,5 +1,5 @@
 'use strict';
-
+var bool = false;
 module.exports = {
     /**
      * @param {string} channel
@@ -9,9 +9,15 @@ module.exports = {
         // *********************************************************************
         // CODE HERE!
         // *********************************************************************
-
-        Slack.postMessageToChannel(channel, "I'm back!");
-
+         
+         if (bool == false) {
+            Slack.postMessageToChannel(channel, "Here I am!");
+            bool = true;
+        } else {
+            Slack.postMessageToChannel(channel, "What do you need?");
+            bool = false;
+        }
+       
         // *********************************************************************
         // STOP CODING!
         // *********************************************************************
