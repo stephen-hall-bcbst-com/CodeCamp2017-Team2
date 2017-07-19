@@ -17,12 +17,20 @@ module.exports = {
         var Helper = message.tolowercase();
         var response = "I think I can help you";
 
-        if (Helper.includes("fix") && Helper.includes("fixing")) {
-            response = "I can help you fix it."; 
-            }
+        if ((Helper.includes("how")) && (Helper.includes("describe"))) {
+             response = "You can ask questions, ask for help,I can tell jokes, or would you like to play a guessing game.";
+        } else {
+             response = "Sorry can't help you";
+        }
+            
         
+            
+            
            
-        Slack.postMessageToChannel(channelName, response);
+           
+             
+            
+            Slack.postMessageToChannel(channelName, response);
 
         // *********************************************************************
         // STOP CODING!
