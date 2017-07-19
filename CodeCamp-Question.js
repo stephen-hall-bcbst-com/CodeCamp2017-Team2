@@ -12,12 +12,37 @@ module.exports = {
         // *********************************************************************
      // Slack.postMessageToChannel(channelName, " okay hold on");
 
-      var lc = question.toLowerCase();
-      var response = "Sorry, cant help.";
+    var lc = question.toLowerCase();
+    var response = "Sorry, cant help.";
 
-           if (lc.includes("age")) {
-            response = "I am actually less than a day old!";
-        }
+    if (lc.includes("age")) {
+        response = "I am actually less than a day old!";
+    }
+
+    
+    if (lc.includes("weather")) {
+        response = "It should be around 85 degree today. Friday July 21st.";
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
      Slack.postMessageToChannel(channelName, response);
 
