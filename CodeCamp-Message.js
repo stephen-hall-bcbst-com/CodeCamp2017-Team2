@@ -55,7 +55,7 @@ module.exports = {
      */ 
     else if (mlc.includes("joke")) {
         var helper = require('./helpers');
-        switch (helper.numberBetweenXandY(1, 5)) {
+        switch (helper.numberBetweenXandY(1, 12)) {
             case 1:
                 resp ='stop SLACKing off';                
                 break;
@@ -70,6 +70,27 @@ module.exports = {
                 break;
             case 5:
                 resp ='whats heavier, a ton of feathers or a ton of gold? neither. a ton is a ton';                
+                break;
+            case 6:
+                resp ='why cant you trust an atom? cause it makes up everything';                
+                break;
+            case 7:
+                resp ='where does the general keep is armies? in his sleevies';                
+                break;
+            case 8:
+                resp ='what is a computers favorite snack? microchips';                
+                break;
+            case 9:
+                resp ='what computer sings the best? a Dell';                
+                break;
+            case 10:
+                resp ='what do you call a black belt pig? pork chop';                
+                break;
+            case 11:
+                resp ='why was the node develepor sad? he didnt NODE how to Express himself.';                
+                break;
+            case 12:
+                resp ='how did the develepor go bankrupt? because he spent all of his CACHE';                
                 break;
             default:
                 break;
