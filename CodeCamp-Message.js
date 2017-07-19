@@ -16,7 +16,9 @@ module.exports = {
         memory.gender = mlc;
         resp = 'whats your hair color?';
         memory.lastquestion = "haircolor";
-    } 
+    } else if (memory.lastquestion =="haircolor") {
+
+    }
    /**
     * ^ ^ ^    default    ^ ^ ^
     * v v v random stuff. v v v 
