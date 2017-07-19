@@ -10,11 +10,18 @@ module.exports = {
     message_received: function(message, channelName, userName, Slack) {
     var mlc = message.toLowerCase();
     var resp = "shhhhhhh";
+    var memory = require("./codecamp-memory" );
+
+    if (memory.lastquestion =="gender") {
+        memory.gender = mlc;
+        resp = 'whats your hair color?';
+        memory.lastquestion = "haircolor";
+    } 
    /**
     * ^ ^ ^    default    ^ ^ ^
     * v v v random stuff. v v v 
     */ 
-    if (mlc.includes("laser")) {
+    else if (mlc.includes("laser")) {
         resp = "Not anymore, theres a blanket";
     } else if (mlc.includes("like")) {
         resp = "Cool, i do too";
@@ -35,11 +42,11 @@ module.exports = {
     } else if (mlc.includes("allstar")) {
         resp = "Somebody once told me the world is gonna roll me I aint the sharpest tool in the shed She was looking kind of dumb with her finger and her thumb In the shape of an L on her forehead Well the years start coming and they don't stop coming Fed to the rules and I hit the ground running Didnt make sense not to live for fun Your brain gets smart but your head gets dumb So much to do so much to see So whats wrong with taking the back streets? Youll never know if you dont go Youll never shine if you dont glow Hey now, youre an allstar, get your game on, go play Hey now, youre a rock star, get the show on, get paid And all that glitters is gold Only shooting stars break the mold";
     } 
+    
     /**
      * ^ ^ ^ random stuff. ^ ^ ^
-     * v v v     maths     v v v
+     * v v v     math     v v v
      */
-    
     else if (mlc.includes(" + ")) {
         resp = "im not doing your maths homework";
     } else if (mlc.includes(" - ")) {
