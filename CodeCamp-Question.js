@@ -17,7 +17,7 @@ module.exports = {
     var memory = require("./codecamp-memory" );
 
                  // AGE
-    if (lc.includes("age")) {
+    if (lc.includes("old")) {
       response = ("I am actually less than a day old!");
     //           WEATHER
     } else if (lc.includes("weather")) {
