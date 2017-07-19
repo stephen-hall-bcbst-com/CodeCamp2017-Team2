@@ -13,10 +13,10 @@ module.exports = {
      // Slack.postMessageToChannel(channelName, " okay hold on");
 
       var lc = question.toLowerCase();
-      var response = ();
-       if (lc.includes("age")) {
-           response = "what is your age? ";
-           } else if (lc.includes("age")) {
+      var response = "Sorry, cant help.";
+      // if (lc.includes("age")) {
+       //    response = "what is your age? ";}
+           if (lc.includes("age")) {
             response = "I am actually less than a day old!";
         }
 
