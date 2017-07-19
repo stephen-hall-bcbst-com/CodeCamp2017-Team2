@@ -93,7 +93,7 @@ module.exports = {
                 resp ='how did the develepor go bankrupt? because he spent all of his CACHE';                
                 break;
             case 13:
-                resp ='what kind of witch do you find in the desert? and sandwich';                
+                resp ='what kind of witch do you find in the desert? a sandwich';                
                 break;
             case 14:
                 resp ='a magician was driving a car, and he made it turn into a drive way.';                
