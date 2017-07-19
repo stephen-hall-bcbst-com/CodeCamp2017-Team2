@@ -14,8 +14,7 @@ module.exports = {
 
       var lc = question.toLowerCase();
       var response = "Sorry, cant help.";
-      // if (lc.includes("age")) {
-       //    response = "what is your age? ";}
+
            if (lc.includes("age")) {
             response = "I am actually less than a day old!";
         }
