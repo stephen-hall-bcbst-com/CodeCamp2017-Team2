@@ -31,8 +31,22 @@ module.exports = {
     } else if (mlc.includes("allstar")) {
         resp = "Somebody once told me the world is gonna roll me I aint the sharpest tool in the shed She was looking kind of dumb with her finger and her thumb In the shape of an L on her forehead Well the years start coming and they don't stop coming Fed to the rules and I hit the ground running Didnt make sense not to live for fun Your brain gets smart but your head gets dumb So much to do so much to see So whats wrong with taking the back streets? Youll never know if you dont go Youll never shine if you dont glow Hey now, youre an allstar, get your game on, go play Hey now, youre a rock star, get the show on, get paid And all that glitters is gold Only shooting stars break the mold";
     } else if (mlc.includes("joke")) {
-        resp = "Stop SLACKing off";
-    }
+        var helper = require('./helpers');
+        switch (helper.numberBetweenXandY(1, 3)) {
+            case 1:
+                resp ='stop SLACKing off';                
+                break;
+            case 2:
+                resp ='what do you call a cow with no legs? GROUND beef';                
+                break;
+            case 3:
+                resp ='whats microsofts least favorite food? Apple';                
+                break;
+        
+            default:
+                break;
+        }
+    } 
    
    
    
