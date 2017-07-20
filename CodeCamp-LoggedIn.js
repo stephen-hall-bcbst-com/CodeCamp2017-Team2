@@ -19,7 +19,7 @@ module.exports = {
             Slack.postMessageToChannel(channel, "Here I am!");
             bool = true;
         } else {
-            Slack.postMessageToChannel(channel, "What do you need?");
+            Slack.postMessageToChannel(channel, "Hello, this is 00110010 Bot. how can I help?");
             bool = false;
         }
 
