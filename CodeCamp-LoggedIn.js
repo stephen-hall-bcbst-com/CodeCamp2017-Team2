@@ -16,7 +16,7 @@ module.exports = {
 
 
          if (bool == false) {
-            Slack.postMessageToChannel(channel, "I'm back!!!");
+            Slack.postMessageToChannel(channel, "Here I am!");
             bool = true;
         } else {
             Slack.postMessageToChannel(channel, "What do you need?");
