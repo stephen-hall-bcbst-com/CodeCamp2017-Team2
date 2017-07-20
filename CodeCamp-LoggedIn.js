@@ -13,7 +13,7 @@ module.exports = {
         var helper = require('./helpers');
         bool = JSON.parse(helper.readDataFromFile('loggged_in bool'));
 
-        
+
 
          if (bool == false) {
             Slack.postMessageToChannel(channel, "I'm back!!!");

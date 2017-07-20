@@ -9,21 +9,31 @@ module.exports = {
      */
     message_received: function(message, channelName, userName, Slack) {
     var mlc = message.toLowerCase();
-    var resp = "shhhhhhh";
+    var resp = "Message Invalid.";
     var memory = require("./codecamp-memory" );
 
-    if (memory.lastquestion =="gender") {
-        memory.gender = mlc;
-        resp = 'whats your hair color?';
-        memory.lastquestion = "haircolor";
-    } else if (memory.lastquestion =="haircolor") {
-
+    switch (memory.lastquestion) {
+        case "gender": 
+            memory.gender = mlc;
+            if (mlc != 'male' && mlc != 'female') {
+                resp = "That's not a gender!  Please try again: Are you *Male* or *Female*?";
+                Slack.postMessageToChannel(channelName, resp);
+                return;
+            } else {
+                resp = 'Do you have hair?';
+                memory.lastquestion = "hair";
+                Slack.postMessageToChannel(channelName, resp);
+                return;
+            }
+        case "hair": 
+            break;
     }
+
    /**
     * ^ ^ ^    default    ^ ^ ^
     * v v v random stuff. v v v 
     */ 
-    else if (mlc.includes("laser")) {
+    if (mlc.includes("laser")) {
         resp = "Not anymore, theres a blanket";
     } else if (mlc.includes("like")) {
         resp = "Cool, i do too";
@@ -43,13 +53,21 @@ module.exports = {
         resp = "and it exploded";
     } else if (mlc.includes("allstar")) {
         resp = "Somebody once told me the world is gonna roll me I aint the sharpest tool in the shed She was looking kind of dumb with her finger and her thumb In the shape of an L on her forehead Well the years start coming and they don't stop coming Fed to the rules and I hit the ground running Didnt make sense not to live for fun Your brain gets smart but your head gets dumb So much to do so much to see So whats wrong with taking the back streets? Youll never know if you dont go Youll never shine if you dont glow Hey now, youre an allstar, get your game on, go play Hey now, youre a rock star, get the show on, get paid And all that glitters is gold Only shooting stars break the mold";
-    } 
-    
+    } else if (mlc.includes("hi")) {
+        resp = "Greetings, my fellow human!";
+    } else if (mlc.includes("hello")) {
+        resp = "Greetings, my fellow human!";
+    } else if (mlc.includes("hey")) {
+        resp = "Greetings, my fellow human!";
+    } else if (mlc.includes("greetings")) {
+        resp = "Greetings, my fellow human!";
+    }
+
     /**
      * ^ ^ ^ random stuff. ^ ^ ^
      * v v v     math     v v v
      */
-    else if (mlc.includes(" + ")) {
+    if (mlc.includes(" + ")) {
         resp = "im not doing your maths homework";
     } else if (mlc.includes(" - ")) {
         resp = "im not doing your maths homework";
@@ -57,12 +75,15 @@ module.exports = {
         resp = "im not doing your maths homework";
     } else if (mlc.includes(" / ")) {
         resp = "im not doing your maths homework";
-    } 
+    } else if (mlc.includes("hi")) {
+        resp = "Greetings, my fellow human!";
+    }
+
     /**
      * ^ ^ ^ maths ^ ^ ^
      * v v v jokes v v v
      */ 
-    else if (mlc.includes("joke")) {
+    if (mlc.includes("joke")) {
         var helper = require('./helpers');
         switch (helper.numberBetweenXandY(1, 15)) {
             case 1:
@@ -96,7 +117,7 @@ module.exports = {
                 resp ='what do you call a black belt pig? pork chop';                
                 break;
             case 11:
-                resp ='why was the node develepor sad? he didnt NODE how to Express himself.';                
+                resp ='why was the develepor sad? he didnt NODE how to Express himself.';                
                 break;
             case 12:
                 resp ='how did the develepor go bankrupt? because he spent all of his CACHE';                

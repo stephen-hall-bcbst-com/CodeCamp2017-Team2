@@ -6,5 +6,5 @@ module.exports = {
     botData: botData,
     lastquestion: "",
     gender: "",
-    haircolor: ""
+    haircolor: "",
 };
