@@ -19,15 +19,21 @@ module.exports = {
                 resp = "That's not a gender!  Please try again: Are you *Male* or *Female*?";
                 Slack.postMessageToChannel(channelName, resp);
                 return;
-            } else {
+            } else if (mlc == 'female') {
+                resp = 'You must be Teresa';
+                // Slack.postMessageToChannel(channelName, resp);
+                memory.lastquestion = "";
+            } else if (mlc == 'male') {
                 resp = 'Do you have hair?';
                 memory.lastquestion = "hair";
-                if (mlc = "no");
-                resp = "You must be James";
                 Slack.postMessageToChannel(channelName, resp);
                 return;
             }
         case "hair": 
+            if (mlc == "no") {
+                resp = "You must be James";
+                memory.lastquestion = "";
+            }
             break;
     }
 
