@@ -22,6 +22,8 @@ module.exports = {
             } else {
                 resp = 'Do you have hair?';
                 memory.lastquestion = "hair";
+                if (mlc = "no");
+                resp = "You must be James";
                 Slack.postMessageToChannel(channelName, resp);
                 return;
             }
@@ -61,7 +63,7 @@ module.exports = {
         resp = "Greetings, my fellow human!";
     } else if (mlc.includes("greetings")) {
         resp = "Greetings, my fellow human!";
-    }
+    } 
 
     /**
      * ^ ^ ^ random stuff. ^ ^ ^

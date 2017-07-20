@@ -30,7 +30,7 @@ module.exports = {
         } else if (lc.includes("can you do")) {
             response = "I can tell jokes, I can chat with you, I can assist you, and I can even guess who you are!";
                     // GUESS MY IDENTITY
-        } else if (lc.includes("my identity")) {
+        } else if (lc.includes("my identity") || lc.includes("who am i")) {
             response = " Oh so you want to play the game.....So lets start of with the easy question. Are you Male or Female?";
             memory.lastquestion = "gender";
                     // IS IT HUMAN
