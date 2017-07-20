@@ -21,7 +21,7 @@ module.exports = {
                 return;
             } else if (mlc == 'female') {
                 resp = 'You must be Teresa';
-                Slack.postMessageToChannel(channelName, resp);
+                // Slack.postMessageToChannel(channelName, resp);
                 memory.lastquestion = "";
             } else if (mlc == 'male') {
                 resp = 'Do you have hair?';
@@ -32,6 +32,7 @@ module.exports = {
         case "hair": 
             if (mlc == "no") {
                 resp = "You must be James";
+                memory.lastquestion = "";
             }
             break;
     }
