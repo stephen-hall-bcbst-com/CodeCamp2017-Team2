@@ -63,13 +63,13 @@ module.exports = {
             } else if (mlc == "mustache") {
                 resp = "You must be David";
                 memory.lastquestion = "";
-                return;
+                // return;
             } else {
                 resp = "That's not a hair shade!  Please try again: Do you have *dark* or *light* hair?";
                 Slack.postMessageToChannel(channelName, resp);
                 return;
             }
-            // break;
+            break;
     }
 
    /**
