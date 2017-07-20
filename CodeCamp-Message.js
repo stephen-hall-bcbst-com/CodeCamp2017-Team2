@@ -61,7 +61,7 @@ module.exports = {
                 resp = "You must be Stephen";
                 memory.lastquestion = "";
             } else if (mlc == "mustache") {
-                resp = 'You must be David';
+                resp = "You must be David";
                 memory.lastquestion = "";
                 return;
             } else {
