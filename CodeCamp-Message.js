@@ -9,7 +9,7 @@ module.exports = {
      */
     message_received: function(message, channelName, userName, Slack) {
     var mlc = message.toLowerCase();
-    var resp = "shhhhhhh";
+    var resp = "Message Invalid.";
     var memory = require("./codecamp-memory" );
 
     switch (memory.lastquestion) {
@@ -119,7 +119,7 @@ module.exports = {
                 resp ='what do you call a black belt pig? pork chop';                
                 break;
             case 11:
-                resp ='why was the node develepor sad? he didnt NODE how to Express himself.';                
+                resp ='why was the develepor sad? he didnt NODE how to Express himself.';                
                 break;
             case 12:
                 resp ='how did the develepor go bankrupt? because he spent all of his CACHE';                
