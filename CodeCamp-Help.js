@@ -22,7 +22,7 @@ module.exports = {
         } else {
              response = "Sorry can't help you";
         } if  (Helper.includes("understand")) {
-            response = "I"
+            response = "I";
         }
             
         
