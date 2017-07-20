@@ -5,4 +5,6 @@ var botData = require('./data/bot');
 module.exports = {
     botData: botData,
     lastquestion: "",
+    gender: "",
+    haircolor: ""
 };
