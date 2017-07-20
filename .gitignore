@@ -1,2 +1,3 @@
 SlackApiKey.txt
 data/bot.json.bak.*
+data/loggged_in bool
