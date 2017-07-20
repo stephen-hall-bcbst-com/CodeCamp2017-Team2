@@ -69,7 +69,7 @@ module.exports = {
                 Slack.postMessageToChannel(channelName, resp);
                 return;
             }
-            break;
+            // break;
     }
 
    /**
