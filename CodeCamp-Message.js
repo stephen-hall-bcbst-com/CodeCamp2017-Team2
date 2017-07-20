@@ -30,8 +30,9 @@ module.exports = {
                 return;
             }
         case "hair": 
-            if (mlc = "no");
+            if (mlc == "no") {
                 resp = "You must be James";
+            }
             break;
     }
 
