@@ -21,7 +21,6 @@ module.exports = {
                 return;
             } else if (mlc == 'female') {
                 resp = 'You must be Teresa';
-                // Slack.postMessageToChannel(channelName, resp);
                 memory.lastquestion = "";
             } else if (mlc == 'male') {
                 resp = 'Do you have hair?';
@@ -33,6 +32,42 @@ module.exports = {
             if (mlc == "no") {
                 resp = "You must be James";
                 memory.lastquestion = "";
+            } else if (mlc == "yes") {
+                resp = 'Do you have dark or light hair?';
+                memory.lastquestion = "color";
+                Slack.postMessageToChannel(channelName, resp);
+                return;
+            } else {
+                resp = "That's not a hair shade!  Please try again: Do you have *dark* or *light* hair?";
+                Slack.postMessageToChannel(channelName, resp);
+                return;
+            }
+        case "color": 
+            if (mlc == "light") {
+                resp = "You must be Nick";
+                memory.lastquestion = "";
+            } else if (mlc == "dark") {
+                resp = 'Do you have a beard or a mustache?';
+                memory.lastquestion = "face";
+                Slack.postMessageToChannel(channelName, resp);
+                return;
+            } else {
+                resp = "That's not a valid entry!  Please try again: Do you have a *beard* or a *mustache*?";
+                Slack.postMessageToChannel(channelName, resp);
+                return;
+            }
+        case "face": 
+            if (mlc == "beard") {
+                resp = "You must be Stephen";
+                memory.lastquestion = "";
+            } else if (mlc == "mustache") {
+                resp = 'You must be David';
+                memory.lastquestion = "";
+                return;
+            } else {
+                resp = "That's not a hair shade!  Please try again: Do you have *dark* or *light* hair?";
+                Slack.postMessageToChannel(channelName, resp);
+                return;
             }
             break;
     }
