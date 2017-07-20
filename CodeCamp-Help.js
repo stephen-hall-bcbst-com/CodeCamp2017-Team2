@@ -17,10 +17,12 @@ module.exports = {
         var Helper = message.tolowercase();
         var response = "I think I can help you";
 
-        if ((Helper.includes("how")) && (Helper.includes("describe"))) {
+        if (Helper.includes("how") && Helper.includes("describe")) {
              response = "You can ask questions, ask for help,I can tell jokes, or would you like to play a guessing game.";
         } else {
              response = "Sorry can't help you";
+        } if  (Helper.includes("understand")) {
+            response = "I"
         }
             
         
