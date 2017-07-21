@@ -80,8 +80,6 @@ module.exports = {
         resp = "Not anymore, theres a blanket";
     } else if (mlc.includes("like")) {
         resp = "Cool, i do too";
-    } else if (mlc.includes("00110010")) {
-        resp = "go";
     } else if (mlc.includes("2 to the 9")) {
         resp = "i'll have a number 6 with Xtra dip";
     } else if (mlc.includes("[11:43] Apple Pie]")) {
