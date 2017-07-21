@@ -114,6 +114,7 @@ module.exports = {
         resp = "Greetings, my fellow human!";
     } else if (mlc.includes("who i am")) {
         resp = "To play the guessing game, ask me who you are...";
+    }
 
     /**
      * ^ ^ ^ random stuff. ^ ^ ^
