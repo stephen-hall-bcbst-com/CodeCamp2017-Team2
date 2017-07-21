@@ -122,7 +122,7 @@ module.exports = {
      * v v v     math     v v v
      */
     
-    // these codes 
+    // these codes prove that robots should not do your homework. :D
     
     if (mlc.includes(" + ")) {
         resp = "im not doing your maths homework";
@@ -140,6 +140,9 @@ module.exports = {
      * ^ ^ ^ maths ^ ^ ^
      * v v v jokes v v v
      */ 
+    
+    // totally relevant jokes :DDDD
+    
     if (mlc.includes("joke")) {
         var helper = require('./helpers');
         switch (helper.numberBetweenXandY(1, 14)) {
@@ -198,7 +201,7 @@ module.exports = {
    
    
    
-   
+   // the end.
    
    
    Slack.postMessageToChannel(channelName, resp);
