@@ -28,16 +28,17 @@ module.exports = {
             response = "Im a bot. I dont know. How am I? You tell me!";
                 // WHAT Mystic BOT CAN DO   vvvvvv
         } else if (lc.includes("can you ")) {
-            response = "I can tell jokes, I can chat with you, I can assist you, and I can even guess who you are!";
+            response = "I can tell jokes, I can chat with you, and I can even guess who you are!";
                     // GUESS MY IDENTITY GAME  vvvvvv
         } else if (lc.includes("my identity") || lc.includes("who am i") || lc.includes("who i am")) {
-            response = " Oh so you want to play the game..... lets start of with the easy question. Are you Male or Female?";
+            response = " Oh so you want to play the game..... let's start off with the easy question. Are you Male or Female?";
             memory.lastquestion = "gender";
                     //   ASK IF Mystic Bot IS HUMAN  vvvvv 
         } else if (lc.includes("are you human")) {
             response = "no why would I want to be human. Humans are stupi-- um... I mean stupendous!";
+        } else if (lc.includes(" your favorite color")) {
+            response = "01010000 01110101 01110010 01110000 01101100 01100101. Thats Purple in binary. ";
         }
-
         Slack.postMessageToChannel(channelName, response);
 
         // *********************************************************************
