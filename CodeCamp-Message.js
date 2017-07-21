@@ -53,32 +53,32 @@ module.exports = {
                 Slack.postMessageToChannel(channelName, resp);
                 return;
             } else if (mlc == "dark") {
-                resp = 'Do you have a beard or a mustache?';
+                resp = 'Do you have a beard?';
                 memory.lastquestion = "face";
                 Slack.postMessageToChannel(channelName, resp);
-                return;
-            } else {
-                resp = "That's not a valid entry!  Please try again: Do you have a *beard* or a *mustache*?";
-                Slack.postMessageToChannel(channelName, resp);
-                return;
-            }
-        case "face": 
-            if (mlc == "beard") {
-                resp = "You must be Stephen. Our friendly Coding Camp Instructor";
-                memory.lastquestion = "";
-                 Slack.postMessageToChannel(channelName, resp);
-                return;
-            } else if (mlc == "mustache") {
-                resp = "You must be David";
-                memory.lastquestion = "";
-                 Slack.postMessageToChannel(channelName, resp);
                 return;
             } else {
                 resp = "That's not a hair shade!  Please try again: Do you have *dark* or *light* hair?";
                 Slack.postMessageToChannel(channelName, resp);
                 return;
             }
+        case "face": 
+            if (mlc == "yes") {
+                resp = "You must be Stephen. Our friendly Coding Camp Instructor";
+                memory.lastquestion = "";
+                 Slack.postMessageToChannel(channelName, resp);
+                return;
+            } else if (mlc == "No") {
+                resp = "You must be David";
+                memory.lastquestion = "";
+                 Slack.postMessageToChannel(channelName, resp);
+                return;
+            } else {
+                resp = "That's not a valid entry!  Please try again: Do you have a *beard* or a *mustache*?";
+                Slack.postMessageToChannel(channelName, resp);
+                return;
             }
+        }
 
    /**
     * ^ ^ ^    default    ^ ^ ^
@@ -112,7 +112,8 @@ module.exports = {
         resp = "Greetings, my fellow human!";
     } else if (mlc.includes("greetings")) {
         resp = "Greetings, my fellow human!";
-    } 
+    } else if (mlc.includes("who i am")) {
+        resp = "To play the guessing game, ask me who you are...";
 
     /**
      * ^ ^ ^ random stuff. ^ ^ ^
