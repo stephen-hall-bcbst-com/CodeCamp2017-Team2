@@ -9,7 +9,7 @@ module.exports = {
         // *********************************************************************
         // CODE HERE!
         // *********************************************************************
-         
+           
         var helper = require('./helpers');
         bool = JSON.parse(helper.readDataFromFile('loggged_in bool'));
 
@@ -19,7 +19,7 @@ module.exports = {
             Slack.postMessageToChannel(channel, "Here I am!");
             bool = true;
         } else {
-            Slack.postMessageToChannel(channel, "Hello, this is 00110010 Bot. How can I help?");
+            Slack.postMessageToChannel(channel, "Hello, this is Mystic Bot. How can I help?");
             bool = false;
         }
 
