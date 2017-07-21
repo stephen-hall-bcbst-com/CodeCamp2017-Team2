@@ -13,17 +13,21 @@ module.exports = {
         // *********************************************************************
 
         Slack.postMessageToChannel(channelName, 'What do you need help with?.');
-
+        // turns into lowercase to read easier
         var Helper = message.tolowercase();
+        // defualt response
         var response = "I think I can help you";
-
-        if (Helper.includes("how") && Helper.includes("describe")) {
-             response = "You can ask questions, ask for help,I can tell jokes, or would you like to play a guessing game.";
-        } else {
-             response = "Sorry can't help you";
-        } if  (Helper.includes("understand")) {
-            response = "I";
-        }
+        // key words and what it can do
+        if (Helper.includes("how") && Helper.includes("describe")|| Helper.includes("what")) {
+             response = "You can ask questions, I can tell jokes, or would you like to play a guessing game.";
+        } else if (Helper.concat){
+            response = "";
+        
+         } else {
+             response = "Sorry I do not understand";
+        } 
+          
+        
             
         
             
