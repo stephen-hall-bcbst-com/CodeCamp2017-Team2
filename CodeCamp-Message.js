@@ -21,6 +21,7 @@ module.exports = {
                 resp = "That's not a gender!  Please try again: Are you *Male* or *Female*?";
                 Slack.postMessageToChannel(channelName, resp);
                 return;
+            // TERESA
             } else if (mlc == 'female') {
                 resp = 'Hello, Teresa, Director of Services Enabling Applications. I found your favorite Dilbert cartoon - I hope you enjoy it! \nhttp://blog.klocwork.com/wp-content/uploads/2009/10/dilbert-minivan-small.png';
                 memory.lastquestion = "";
@@ -31,7 +32,7 @@ module.exports = {
                 memory.lastquestion = "hair";
                 Slack.postMessageToChannel(channelName, resp);
                 return;
-            }
+            } // JAMES
         case "hair": 
             if (mlc == "no") {
                 resp = "Oh, you must be James, The bald, genius instructor. I've heard a lot about you... All good things, of course!";
@@ -47,7 +48,7 @@ module.exports = {
                 resp = "That's not a hair shade!  Please try again: Do you have *dark* or *light* hair?";
                 Slack.postMessageToChannel(channelName, resp);
                 return;
-            }
+            } // NICK
         case "color": 
             if (mlc == "light") {
                 resp = "Whaddup Nick, Chief Information Officer and Senior Vice President! You're the boss! Literally! And metaphorically!";
@@ -63,13 +64,14 @@ module.exports = {
                 resp = "That's not a hair shade!  Please try again: Do you have *dark* or *light* hair?";
                 Slack.postMessageToChannel(channelName, resp);
                 return;
-            }
+            } // STEPHEN
         case "face": 
             if (mlc == "yes") {
                 resp = "Salutations Stephen. Our friendly Coding Camp Instructor";
                 memory.lastquestion = "";
                  Slack.postMessageToChannel(channelName, resp);
                 return;
+                // DAVID
             } else if (mlc == "no") {
                 resp = "Aloha, David, Vice President of Information Services. I've heard you're a FABULOUS dancer... Surfs up!";
                 memory.lastquestion = "";
