@@ -22,7 +22,7 @@ module.exports = {
                 Slack.postMessageToChannel(channelName, resp);
                 return;
             } else if (mlc == 'female') {
-                resp = 'Hello, Teresa, Director of Services Enabling Applications. I found your favorite Dilbert cartoon - I hope you enjoy it! \nhttps://slack-redir.net/link?url=http%3A%2F%2Fblog.klocwork.com%2Fwp-content%2Fuploads%2F2009%2F10%2Fdilbert-minivan-small.png&v=3';
+                resp = 'Hello, Teresa, Director of Services Enabling Applications. I found your favorite Dilbert cartoon - I hope you enjoy it! \nhttp://blog.klocwork.com/wp-content/uploads/2009/10/dilbert-minivan-small.png';
                 memory.lastquestion = "";
                 Slack.postMessageToChannel(channelName, resp);
                 return;
@@ -70,13 +70,13 @@ module.exports = {
                 memory.lastquestion = "";
                  Slack.postMessageToChannel(channelName, resp);
                 return;
-            } else if (mlc == "No") {
+            } else if (mlc == "no") {
                 resp = "Aloha, David, Vice President of Information Services. I've heard you're a FABULOUS dancer... Surfs up!";
                 memory.lastquestion = "";
                  Slack.postMessageToChannel(channelName, resp);
                 return;
             } else {
-                resp = "That's not a valid entry!  Please try again: Do you have a *beard* or a *mustache*?";
+                resp = "That's not a valid entry!  Please try again: Do you have a beard? *yes* or *no*?";
                 Slack.postMessageToChannel(channelName, resp);
                 return;
             }
@@ -115,10 +115,6 @@ module.exports = {
     } else if (mlc.includes("who i am")) {
         resp = "To play the guessing game, ask me who you are...";
     }
-<<<<<<< HEAD
-=======
-
->>>>>>> e467fecc798ac5cf346f3849adc3e9a7268738c8
     /**
      * ^ ^ ^ random stuff. ^ ^ ^
      * v v v     math     v v v
