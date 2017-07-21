@@ -15,6 +15,7 @@ module.exports = {
         // CODE HERE!
         // *********************************************************************
     
+        // Every 1 min it say's "Talk to me!"
         Slack.postMessageToChannel(channel, 'Talk to me!');
 
         // *********************************************************************
