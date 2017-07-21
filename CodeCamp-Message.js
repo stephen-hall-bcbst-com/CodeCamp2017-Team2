@@ -115,6 +115,10 @@ module.exports = {
     } else if (mlc.includes("who i am")) {
         resp = "To play the guessing game, ask me who you are...";
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> e467fecc798ac5cf346f3849adc3e9a7268738c8
     /**
      * ^ ^ ^ random stuff. ^ ^ ^
      * v v v     math     v v v
