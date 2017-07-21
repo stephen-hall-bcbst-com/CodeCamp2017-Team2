@@ -19,7 +19,7 @@ module.exports = {
         var response = "I think I can help you";
         // key words and what it can do/description/ shutSdown 
         if (Helper.includes("how") && Helper.includes("describe")|| Helper.includes("what")) { 
-               response = "You can ask questions, I can tell jokes,would you like to play a guessing game, or to shut me down say go bye bye.";
+               response = "You can ask questions, I can tell jokes,would you like to play a guessing game, or to shutdown say go bye bye.";
         } else {
              response = "Sorry I do not understand";
         } 
