@@ -12,7 +12,7 @@ module.exports = {
     var resp = "Message Invalid.";
     var memory = require("./codecamp-memory" );
 
-    
+    // guessing game :D
     
     switch (memory.lastquestion) {
         case "gender": 
@@ -83,7 +83,7 @@ module.exports = {
         }
 
    /**
-    * ^ ^ ^    default    ^ ^ ^
+    * ^ ^ ^    the game    ^ ^ ^
     * v v v random stuff. v v v 
     */ 
     if (mlc.includes("laser")) {
@@ -120,6 +120,9 @@ module.exports = {
      * ^ ^ ^ random stuff. ^ ^ ^
      * v v v     math     v v v
      */
+    
+    // these codes 
+    
     if (mlc.includes(" + ")) {
         resp = "im not doing your maths homework";
     } else if (mlc.includes(" - ")) {
